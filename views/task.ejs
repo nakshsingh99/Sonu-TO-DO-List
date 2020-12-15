@@ -1,0 +1,60 @@
+<%- include("header") -%>
+ 
+  <div class="search" id="heading">
+    <h1> <%= listTitle %> </h1>
+    <input id="searchbar" onkeyup="search_list()" type="text"
+        name="search" placeholder="Search your TODO list"> 
+  </div>
+ 
+  <div class="search">
+    <% for (let i=0; i<newListItems.length ; i++) { %>
+      <% if( newListItems[i].priority === "1" ){ %>
+      <form class="" action="/delete" method="post">
+      <div class="item">
+          <input type="checkbox" value="<%= newListItems[i]._id %>" onchange="this.form.submit()" name="checkbox">
+          <p class="mysearch"><%=  newListItems[i].name  %></p>
+          <p>✅</p>
+         
+      </div>
+      <input type="hidden" name="listName" value="<%=listTitle  %>"></input>
+    </form>
+    <% } %> 
+      <% } %>
+      <% for (let i=0; i<newListItems.length ; i++) { %>
+        <% if( newListItems[i].priority === "0" ){ %>
+        <form class="" action="/delete" method="post">
+        <div class="item">
+            <input type="checkbox" value="<%= newListItems[i]._id %>" onchange="this.form.submit()" name="checkbox">
+            <p class="mysearch"><%=  newListItems[i].name  %></p>   
+        </div>
+        <input type="hidden" name="listName" value="<%=listTitle  %>"></input>
+      </form>
+      <% } %> 
+    <% } %>
+ 
+      <form action="/" method="post">
+        <input type="text" name="newItem" placeholder="New Task" autocomplete="off">
+        <input type="text" name="newItemPriority" placeholder="Type Priority(0/1): YES(1)/NO(0)" autocomplete="off">
+        <button type="submit" name="list" value="<%=listTitle  %>">ADD</button>
+      </form>
+  </div>
+ 
+<%- include("footer") -%>
+
+<script>
+function search_list() { 
+    let input = document.getElementById('searchbar').value 
+    input=input.toLowerCase(); 
+    let s = document.getElementsByClassName('mysearch'); 
+      
+    for (i = 0; i < s.length; i++) {  
+        if (!s[i].innerHTML.toLowerCase().includes(input)) { 
+            s[i].style.display="none"; 
+        } 
+        else { 
+            s[i].style.display="list-item";                  
+        } 
+    } 
+} 
+</script>
+ 

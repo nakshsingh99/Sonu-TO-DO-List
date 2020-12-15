@@ -1,0 +1,108 @@
+html {
+  background-color: #E4E9FD;
+  background-image: url("https://i.ibb.co/dgkx2n4/todo1.png");
+  min-height: 10px;
+  font-family: 'helvetica neue';
+}
+
+
+.search {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 5px 5px 15px -5px rgba(255, 255, 0, 0.2);
+}
+
+h1 {
+  color: #fff;
+  padding: 10px;
+}
+
+
+#heading {
+  background-color: #d9e383;
+  text-align: center;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  text-decoration: solid;
+  text-decoration-color: #00204a;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input:checked+p {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  text-decoration: line-through;
+  text-decoration-color: #386666;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204a;
+}
+
+form.item {
+  text-align: center;
+  margin-left: 20px;
+}
+
+
+footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #dde383;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
