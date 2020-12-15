@@ -1,7 +1,9 @@
 # Workflow of TO-DO List application
-*My to-do list is live hoted and easily accessible but first look at the workflow[Click here for to-do list]( https://sonutodolist.herokuapp.com/)*
+*My to-do list is live hosted and easily accessible but first look at the workflow [Click here for to-do list]( https://sonutodolist.herokuapp.com/)*</br>
 *Here is the complete workflow of To-Do list*
-![](images/logistic-regression.jpg)
+
+![todovisual](https://user-images.githubusercontent.com/43922639/102268106-de99a480-3f40-11eb-91ab-3526b4001a86.png)
+
 
 1.Visit the website of Yo Yo Pizza and scroll down.
 
